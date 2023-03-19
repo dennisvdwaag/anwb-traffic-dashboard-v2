@@ -1,10 +1,10 @@
 import React from 'react';
 import { type Jam, type Roadwork, type Road as RoadType } from '../../../Types/Incidents/types';
 import { Box, Heading, HStack, Tag, Text, Tooltip } from '@chakra-ui/react';
-import { MapDispatchType } from '../Context/MapReducer';
 import TrafficIcon from '../../../Theme/Icons/TrafficIcon';
 import ConstrustionIcon from '../../../Theme/Icons/ConstructionIcon';
 import { useMapContext } from '../Context/MapProvider';
+import { MapDispatchType } from '../../../Types/Map/enums';
 
 interface RoadProps {
     road: RoadType

@@ -3,8 +3,8 @@ import { useGoogleMap } from '@react-google-maps/api';
 import React from 'react';
 import { formatBounds } from '../../../Functions/format';
 import { type Jam } from '../../../Types/Incidents/types';
+import { MapDispatchType } from '../../../Types/Map/enums';
 import { useMapContext } from '../Context/MapProvider';
-import { MapDispatchType } from '../Context/MapReducer';
 
 interface JamsProps {
     jams: Jam[]

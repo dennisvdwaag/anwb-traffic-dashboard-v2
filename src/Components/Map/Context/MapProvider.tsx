@@ -1,16 +1,8 @@
-import React, { createContext, type Dispatch, useContext, useReducer } from 'react';
-import { initState, mapReducer, type MapReducerAction, type MapState } from './MapReducer';
-
-interface MapContextType {
-    dispatch: Dispatch<MapReducerAction>
-    state: MapState
-}
+import React, { createContext, useContext, useReducer } from 'react';
+import { type MapProviderProps, type MapContextType } from '../../../Types/Map/types';
+import { initState, mapReducer } from './MapReducer';
 
 export const MapContext = createContext<MapContextType>({} as unknown as MapContextType);
-
-interface MapProviderProps {
-    children: React.ReactNode
-}
 
 export const MapProvider: React.FC<MapProviderProps> = ({ children }) => {
     const [state, dispatch] = useReducer(mapReducer, { ...initState });

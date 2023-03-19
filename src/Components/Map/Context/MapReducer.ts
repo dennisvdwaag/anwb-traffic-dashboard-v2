@@ -1,32 +1,6 @@
 import { type Reducer } from 'react';
-import { type Jam, type Road, type Roadwork } from '../../../Types/Incidents/types';
-
-export enum MapDispatchSegment {
-    ROADWORKS = 'Roadworks',
-    JAMS = 'Jams'
-}
-
-export interface MapState {
-    activeRoad?: Road
-    activeSegment?: MapDispatchSegment
-    activeIncident?: Roadwork | Jam
-}
-
-export enum MapDispatchType {
-    SET_ROAD = 'set_road',
-    UNSET_ROAD = 'unset_road',
-    SET_SEGMENT = 'set_segment',
-    UNSET_SEGMENT = 'unset_segment',
-    SET_INCIDENT = 'set_incident',
-    UNSET_INCIDENT = 'unset_incident'
-}
-
-export interface MapReducerAction {
-    type: MapDispatchType
-    activeRoad?: Road
-    activeSegment?: MapDispatchSegment
-    activeIncident?: Roadwork | Jam
-}
+import { MapDispatchType } from '../../../Types/Map/enums';
+import { type MapReducerAction, type MapState } from '../../../Types/Map/types';
 
 export const initState: MapState = {
     activeRoad: undefined,

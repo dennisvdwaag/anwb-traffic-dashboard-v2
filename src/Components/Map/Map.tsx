@@ -3,9 +3,9 @@ import React from 'react';
 import { useMapContext } from './Context/MapProvider';
 import { decode } from '@googlemaps/polyline-codec';
 import { formatPolylinePath } from '../../Functions/format';
-import { MapDispatchSegment } from './Context/MapReducer';
 import Sidebar from './Sidebar/Sidebar';
 import { useIncidents } from '../../Query/Incidents/traffic';
+import { MapDispatchSegment } from '../../Types/Map/enums';
 
 export const centerNetherlands = {
     lat: 52.2130,

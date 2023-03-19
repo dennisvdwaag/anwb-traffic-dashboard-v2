@@ -2,8 +2,8 @@ import { Box, HStack, UnorderedList, ListItem, Stack, Text } from '@chakra-ui/re
 import React from 'react';
 import { formatDateTime } from '../../../Functions/format';
 import { type Roadwork } from '../../../Types/Incidents/types';
+import { MapDispatchType } from '../../../Types/Map/enums';
 import { useMapContext } from '../Context/MapProvider';
-import { MapDispatchType } from '../Context/MapReducer';
 
 interface RoadworksProps {
     roadworks: Roadwork[]
