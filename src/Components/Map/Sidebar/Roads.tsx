@@ -14,9 +14,7 @@ const Roads: React.FC<RoadsProps> = ({ roads }) => {
     const [filteredRoads, setFilteredRoads] = useState<RoadType[]>();
 
     useEffect(() => {
-        if (roads) {
-            setFilteredRoads(roads);
-        }
+        if (roads) setFilteredRoads(roads);
     }, [roads, setFilteredRoads]);
 
     return (
@@ -24,6 +22,9 @@ const Roads: React.FC<RoadsProps> = ({ roads }) => {
             <Input
                 variant='unstyled'
                 placeholder='Find roads'
+                borderBottom='1px solid'
+                borderColor='gray.200'
+                borderRadius={0}
                 p={3}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => { setFilteredRoads(roads?.filter((road) => road.road.toUpperCase().includes(e.target.value.toUpperCase()))); }}
             />
